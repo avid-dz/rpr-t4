@@ -8,7 +8,7 @@ import java.util.TreeSet;
 public class PlanStudija {
 
     private String naziv;
-    private Map<int, Set<Predmet>> mapaStudija;
+    private Map<Integer, Set<Predmet>> mapaStudija;
 
     public PlanStudija(String naziv) {
         this.naziv = naziv;

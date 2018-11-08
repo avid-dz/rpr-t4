@@ -16,7 +16,4 @@ public class Student {
     public int dajBrojIndeksa() {
         return brojIndeksa;
     }
-    public void ispisiPodatke() {
-        System.out.println("Student " + imePrezime + " sa brojem indeksa " + (brojIndeksa));
-    }
 }

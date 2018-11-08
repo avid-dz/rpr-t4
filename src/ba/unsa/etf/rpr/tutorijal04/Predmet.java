@@ -12,14 +12,23 @@ public class Predmet {
         this.obavezan = obavezan;
     }
 
-    public String dajNazivPredmeta() {
+    public String getNazivPredmeta() {
         return nazivPredmeta;
     }
-    public int dajBrojECTS() {
+    public void setNazivPredmeta(String nazivPredmeta) {
+        this.nazivPredmeta = nazivPredmeta;
+    }
+    public int getBrojECTS() {
         return brojECTS;
     }
-    public boolean daLiJeObavezan() {
+    public void setBrojECTS(int brojECTS) {
+        this.brojECTS = brojECTS;
+    }
+    public boolean isObavezan() {
         return obavezan;
+    }
+    public void setObavezan(boolean obavezan) {
+        this.obavezan = obavezan;
     }
     public void ispisiSpisakStudenata() {
 

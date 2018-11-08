@@ -21,10 +21,10 @@ public class PlanStudija {
     public void setNaziv(String naziv) {
         this.naziv = naziv;
     }
-    public void dodajSemestar(int redniBroj) {
+    public void dodajSemestar(Integer redniBroj) {
         mapaStudija.put(redniBroj, new TreeSet<>());
     }
-    public void dodajPredmetUSemestar(int redniBroj, Predmet predmet) {
+    public void dodajPredmetUSemestar(Integer redniBroj, Predmet predmet) {
         mapaStudija.get(redniBroj).add(predmet);
     }
 }

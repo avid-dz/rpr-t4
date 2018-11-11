@@ -30,9 +30,13 @@ public class Upis implements Comparable<Upis> {
     public void setPlanStudija(PlanStudija planStudija) {
         this.planStudija = planStudija;
     }
+    public String ispisi() {
+        return getStudent().ispisi() + " upisan na predmet " + getPredmet().ispisi()
+                + " po planu studija " + getPlanStudija().getNaziv();
+    }
 
     @Override
     public int compareTo(Upis o) {
-        return getStudent().getImePrezime().compareTo(o.getStudent().getImePrezime());
+        return ispisi().compareTo(o.ispisi());
     }
 }

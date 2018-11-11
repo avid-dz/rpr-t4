@@ -19,7 +19,9 @@ public class Main {
             System.out.println("1 - Dodavanje predmeta na fakultet");
             System.out.println("2 - Upis studenta na fakultet");
             System.out.println("3 - Upis studenta na predmet po odredjenom planu studija");
-            System.out.println("4 - Ispis spiska studenata na odredjenom predmetu");
+            System.out.println("4 - Ispis spiska svih predmeta na fakultetu");
+            System.out.println("5 - Ispis spiska svih studenata na fakultetu");
+            System.out.println("6 - Ispis spiska studenata na odredjenom predmetu");
             opcija = scan.nextInt();
             if (opcija == 0) break;
             switch (opcija) {
@@ -28,7 +30,7 @@ public class Main {
                     uneseniNazivPredmeta = scan.next();
                     System.out.print("Unesite broj ECTS: ");
                     uneseniBrojECTS = scan.nextInt();
-                    System.out.print("Da li je predmet obavezan (unesite O) ili izborni (unesite I)?");
+                    System.out.print("Da li je predmet obavezan (unesite O) ili izborni (unesite I)? ");
                     unesenaObaveznost = scan.next();
                     if (unesenaObaveznost.equals("O")) {
                         f.dodajPredmetNaFakultet(new Predmet(uneseniNazivPredmeta, uneseniBrojECTS, true));
@@ -64,7 +66,7 @@ public class Main {
                     uneseniNazivPredmeta = scan.next();
                     System.out.print("Unesite broj ECTS: ");
                     uneseniBrojECTS = scan.nextInt();
-                    System.out.print("Da li je predmet obavezan (unesite O) ili izborni (unesite I)?");
+                    System.out.print("Da li je predmet obavezan (unesite O) ili izborni (unesite I)? ");
                     unesenaObaveznost = scan.next();
                     Student s = new Student((unesenoImeStudenta + " " + unesenoPrezimeStudenta), uneseniBrojIndexa);
                     Predmet pr = null;
@@ -80,11 +82,21 @@ public class Main {
                     System.out.println();
                     break;
                 case 4:
+                    System.out.println("Svi predmeti na fakultetu su:");
+                    f.ispisiSpisakPredmetaNaFakultetu();
+                    System.out.println();
+                    break;
+                case 5:
+                    System.out.println("Svi studenti an fakultetu su:");
+                    f.ispisiSpisakStudenataNaFakultetu();
+                    System.out.println();
+                    break;
+                case 6:
                     System.out.print("Unesite naziv predmeta: ");
                     uneseniNazivPredmeta = scan.next();
                     System.out.print("Unesite broj ECTS: ");
                     uneseniBrojECTS = scan.nextInt();
-                    System.out.print("Da li je predmet obavezan (unesite O) ili izborni (unesite I)?");
+                    System.out.print("Da li je predmet obavezan (unesite O) ili izborni (unesite I)? ");
                     unesenaObaveznost = scan.next();
                     Predmet p = null;
                     if (unesenaObaveznost.equals("O")) {

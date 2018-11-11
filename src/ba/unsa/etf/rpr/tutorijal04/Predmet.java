@@ -30,6 +30,12 @@ public class Predmet implements Comparable<Predmet> {
     public void setObavezan(boolean obavezan) {
         this.obavezan = obavezan;
     }
+    public String ispisi() {
+        if (obavezan) {
+            return "Obavezni predmet " + getNazivPredmeta() + " sa " + getBrojECTS() + " ECTS";
+        }
+        return "Izborni predmet " + getNazivPredmeta() + " sa " + getBrojECTS() + " ECTS";
+    }
 
     @Override
     public int compareTo(Predmet o) {

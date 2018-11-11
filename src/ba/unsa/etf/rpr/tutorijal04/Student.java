@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal04;
 
-public class Student {
+public class Student implements Comparable<Student> {
 
     private String imePrezime;
     private int brojIndeksa;
@@ -10,10 +10,15 @@ public class Student {
         this.brojIndeksa = brojIndeksa;
     }
 
-    public String dajImePrezime() {
+    public String getImePrezime() {
         return imePrezime;
     }
-    public int dajBrojIndeksa() {
+    public int getBrojIndeksa() {
         return brojIndeksa;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return getImePrezime().compareTo(o.getImePrezime());
     }
 }

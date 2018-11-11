@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal04;
 
-public class Predmet {
+public class Predmet implements Comparable<Predmet> {
 
     private String nazivPredmeta;
     private int brojECTS;
@@ -30,7 +30,15 @@ public class Predmet {
     public void setObavezan(boolean obavezan) {
         this.obavezan = obavezan;
     }
-    public void ispisiSpisakStudenata() {
 
+    @Override
+    public int compareTo(Predmet o) {
+        return getNazivPredmeta().compareTo(o.getNazivPredmeta());
+    }
+
+    public boolean equals(Predmet predmet) {
+        return nazivPredmeta.equals(predmet.nazivPredmeta)
+                && brojECTS == predmet.brojECTS
+                && obavezan == predmet.obavezan;
     }
 }

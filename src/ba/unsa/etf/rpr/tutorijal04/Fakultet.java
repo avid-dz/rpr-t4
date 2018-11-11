@@ -24,5 +24,11 @@ public class Fakultet {
     public void upisi(Student student, Predmet predmet, PlanStudija planStudija) {
         upisani.add(new Upis(student, predmet, planStudija));
     }
-
+    public void ispisiSpisakStudenataNaPredmetu(Predmet predmet) {
+        for (Upis upis : upisani) {
+            if (upis.getPredmet().equals(predmet)) {
+                System.out.println("Student" + );
+            }
+        }
+    }
 }

@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal04;
 
-public class Upis {
+public class Upis implements Comparable<Upis> {
 
     private Student student;
     private Predmet predmet;
@@ -29,5 +29,10 @@ public class Upis {
     }
     public void setPlanStudija(PlanStudija planStudija) {
         this.planStudija = planStudija;
+    }
+
+    @Override
+    public int compareTo(Upis o) {
+        return getStudent().getImePrezime().compareTo(o.getStudent().getImePrezime());
     }
 }

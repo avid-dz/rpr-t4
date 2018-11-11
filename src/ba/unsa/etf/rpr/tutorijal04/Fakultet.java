@@ -27,7 +27,7 @@ public class Fakultet {
     public void ispisiSpisakStudenataNaPredmetu(Predmet predmet) {
         for (Upis upis : upisani) {
             if (upis.getPredmet().equals(predmet)) {
-                System.out.println("Student" + );
+                System.out.println(upis.getStudent().ispisi());
             }
         }
     }

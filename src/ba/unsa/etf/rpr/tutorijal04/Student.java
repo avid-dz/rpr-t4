@@ -16,6 +16,9 @@ public class Student implements Comparable<Student> {
     public int getBrojIndeksa() {
         return brojIndeksa;
     }
+    public String ispisi() {
+        return "Student " + getImePrezime() + " sa brojem indeksa " + getBrojIndeksa();
+    }
 
     @Override
     public int compareTo(Student o) {

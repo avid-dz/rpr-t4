@@ -22,6 +22,6 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student o) {
-        return getImePrezime().compareTo(o.getImePrezime());
+        return ispisi().compareTo(o.ispisi());
     }
 }

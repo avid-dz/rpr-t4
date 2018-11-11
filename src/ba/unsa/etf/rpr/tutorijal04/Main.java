@@ -32,7 +32,7 @@ public class Main {
                     uneseniBrojECTS = scan.nextInt();
                     System.out.print("Da li je predmet obavezan (unesite O) ili izborni (unesite I)? ");
                     unesenaObaveznost = scan.next();
-                    if (unesenaObaveznost.equals("O")) {
+                    if (unesenaObaveznost.toUpperCase().equals("O")) {
                         f.dodajPredmetNaFakultet(new Predmet(uneseniNazivPredmeta, uneseniBrojECTS, true));
                     }
                     else {
@@ -71,7 +71,7 @@ public class Main {
                     Student s = new Student((unesenoImeStudenta + " " + unesenoPrezimeStudenta), uneseniBrojIndexa);
                     Predmet pr = null;
                     PlanStudija ps = new PlanStudija(uneseniNazivPlanaStudija);
-                    if (unesenaObaveznost.equals("O")) {
+                    if (unesenaObaveznost.toUpperCase().equals("O")) {
                         pr = new Predmet(uneseniNazivPredmeta, uneseniBrojECTS, true);
                     }
                     else {
@@ -99,7 +99,7 @@ public class Main {
                     System.out.print("Da li je predmet obavezan (unesite O) ili izborni (unesite I)? ");
                     unesenaObaveznost = scan.next();
                     Predmet p = null;
-                    if (unesenaObaveznost.equals("O")) {
+                    if (unesenaObaveznost.toUpperCase().equals("O")) {
                         p = new Predmet(uneseniNazivPredmeta, uneseniBrojECTS, true);
                     }
                     else {

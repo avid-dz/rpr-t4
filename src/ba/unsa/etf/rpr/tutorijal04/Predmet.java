@@ -39,7 +39,7 @@ public class Predmet implements Comparable<Predmet> {
 
     @Override
     public int compareTo(Predmet o) {
-        return getNazivPredmeta().compareTo(o.getNazivPredmeta());
+        return ispisi().compareTo(o.ispisi());
     }
 
     public boolean equals(Predmet predmet) {

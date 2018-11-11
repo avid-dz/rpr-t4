@@ -34,13 +34,13 @@ public class Fakultet {
         }
     }
     public void ispisiSpisakPredmetaNaFakultetu() {
-        for (Upis upis : upisani) {
-            System.out.println(upis.getPredmet().ispisi());
+        for (Predmet predmet : skupSvihPredmeta) {
+            System.out.println(predmet.ispisi());
         }
     }
     public void ispisiSpisakStudenataNaFakultetu() {
-        for (Upis upis : upisani) {
-            System.out.println(upis.getStudent().ispisi());
+        for (Student student : skupSvihStudenata) {
+            System.out.println(student.ispisi());
         }
     }
 }
